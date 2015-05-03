@@ -1,5 +1,7 @@
 #!/bin/bash
 
+# This script is used to backup my DigitalOcean dropplet (Wordpress, Wiki and MySQL DB) into my Synology
+
 email_address='egomezm@gmail.com';
 
 fecha=`date "+%Y%m%d"`;
