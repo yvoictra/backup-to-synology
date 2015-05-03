@@ -1,5 +1,7 @@
 #!/bin/bash
 
+email_address='egomezm@gmail.com';
+
 fecha=`date "+%Y%m%d"`;
 
 mkdir -p /root/backup_shasta/$fecha
@@ -18,7 +20,7 @@ rsync -e "ssh -p 2222" -av /root/backup_shasta/$fecha rsync@yvoictra.noip.me:/vo
 
 /bin/rm -r /root/backup_shasta
 
-/usr/sbin/sendmail "egomezm@gmail.com" <<EOF
+/usr/sbin/sendmail "$email_address" <<EOF
 subject:[Backup] Shasta backup finalizado [`date`]
 Se ha realizado con exito el backup $fecha.
 EOF
